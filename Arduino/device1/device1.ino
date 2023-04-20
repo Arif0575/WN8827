@@ -224,6 +224,6 @@ void process_data(String Data) {
 
 float get_pot(){
   float rawPot = analogRead(A1);
-  float reducedPot = rawPot/50.0 + 15;
+  float reducedPot = map(rawPot,0,1023,15,30);
   return reducedPot;
 }
